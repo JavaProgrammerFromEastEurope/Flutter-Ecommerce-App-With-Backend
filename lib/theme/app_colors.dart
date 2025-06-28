@@ -10,7 +10,7 @@ class AppColors {
   static const Color iconColor2 = Color(0xFFfcab88); // яркий синий
   static const Color paraColor = Color(0xFF8f837f); // яркий синий
   static const Color buttonBackgroundColor = Color(0xFFf7f6f4); // яркий синий
-  static const Color signColor = Color(0xFFf7f6f4); // яркий синий
+  static const Color signColor = Color(0xFFFF00FF); // яркий синий
   static const Color titleColor = Color(0xFF5c524f); // яркий синий
   static const Color mainBlackColor = Color(0xFF332d2b); // яркий синий
   static const Color yellowColor = Color(0xFFffd379); // яркий синий
