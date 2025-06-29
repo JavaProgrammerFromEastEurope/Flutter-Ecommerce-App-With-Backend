@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_2_first/theme/app_colors.dart';
 import 'package:flutter_ecommerce_2_first/utils/dimensions.dart';
 
+// ignore: must_be_immutable
 class BigText extends StatelessWidget {
   Color? color;
   final String text;

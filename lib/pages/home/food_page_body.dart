@@ -226,7 +226,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       top: Dimensions.height15,
                       left: Dimensions.height15,
                       right: Dimensions.height15),
-                  child: AppColumn(text: "Chinese Side",),),
+                  child: AppColumn(text: "Chinese Side",)
+                  ,),
             ),
           ),
         ],

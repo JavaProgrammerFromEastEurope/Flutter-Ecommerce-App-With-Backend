@@ -4,6 +4,7 @@ import 'package:flutter_ecommerce_2_first/utils/dimensions.dart';
 import 'package:flutter_ecommerce_2_first/widgets/app_column.dart';
 import 'package:flutter_ecommerce_2_first/widgets/app_icon.dart';
 import 'package:flutter_ecommerce_2_first/widgets/big_text.dart';
+import 'package:flutter_ecommerce_2_first/widgets/expandable_text_widget.dart';
 import 'package:flutter_ecommerce_2_first/widgets/icon_and_text_widget.dart';
 import 'package:flutter_ecommerce_2_first/widgets/small_text.dart';
 
@@ -16,6 +17,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          // background image
           Positioned(
               left: 0,
               right: 0,
@@ -29,6 +31,7 @@ class PopularFoodDetail extends StatelessWidget {
                           "assets/img/food0.png",
                         )),
                   ))),
+          // icon widget
           Positioned(
               top: Dimensions.height45,
               left: Dimensions.width20,
@@ -40,6 +43,7 @@ class PopularFoodDetail extends StatelessWidget {
                   AppIcon(icon: Icons.shopping_cart_outlined),
                 ],
               )),
+          // introduction of food
           Positioned(
               left: 0,
               right: 0,
@@ -66,12 +70,17 @@ class PopularFoodDetail extends StatelessWidget {
                         height: Dimensions.height20,
                       ),
                       BigText(text: "Introduce"),
+                      Expanded(
+                          child: SingleChildScrollView(
+                              child: ExpandableTextWidget(
+                                  text: "//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget")))
                     ],
                   ))),
+          // expandable text widget
         ],
       ),
       bottomNavigationBar: Container(
-        height: 120,
+        height: Dimensions.bottomHeightBar,
         padding: EdgeInsets.only(
             top: Dimensions.height30,
             bottom: Dimensions.height30,
