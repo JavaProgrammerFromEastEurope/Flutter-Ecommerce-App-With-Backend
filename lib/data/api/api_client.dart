@@ -21,6 +21,7 @@ class ApiClient extends GetConnect implements GetxService {
     String uri,
   ) async {
     try {
+      print("got products");
       Response response = await get(uri);
       return response;
     } catch (e) {

@@ -120,9 +120,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                           color: Colors.white38,
                           image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(AppConstants.BASE_URL +
-                                  '/updates/' +
-                                  popularProduct.img!))),
+                              image: AssetImage("assets/img/food0.png"))),
                     ),
                     // text container
                     Expanded(
