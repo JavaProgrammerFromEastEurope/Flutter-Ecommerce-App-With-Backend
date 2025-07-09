@@ -215,8 +215,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       index.isEven ? AppColors.iconColor1 : AppColors.mainColor,
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(AppConstants.BASE_URL +
-                          '/updates/' +
+                      image: NetworkImage(
+                        AppConstants.BASE_URL +
+                          "/updates/" +
                           popularProduct.img!)))),
           Align(
             alignment: Alignment.bottomCenter,
