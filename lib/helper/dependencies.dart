@@ -4,7 +4,6 @@ import 'package:flutter_ecommerce_2_first/data/repository/popular_product_repo.d
 import 'package:flutter_ecommerce_2_first/utils/app_constants.dart';
 import 'package:get/get.dart';
 
-
 Future<void> init() async {
   // api client
   Get.lazyPut(() => ApiClient(appBaseUrl: AppConstants.BASE_URL));
