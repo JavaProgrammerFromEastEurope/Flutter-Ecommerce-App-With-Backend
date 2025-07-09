@@ -8,7 +8,8 @@ class BigText extends StatelessWidget {
   final String text;
   double size;
   final TextOverflow textOverflow;
-  BigText({super.key,
+  BigText(
+      {super.key,
       this.color = AppColors.mainBlackColor,
       required this.text,
       this.size = 0,
