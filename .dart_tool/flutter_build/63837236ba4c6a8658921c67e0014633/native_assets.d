@@ -1,0 +1,1 @@
+ /home/t1/code/project-of-my-dream/flutter\ projects/ecommerce/flutter_ecommerce_2_first/.dart_tool/flutter_build/63837236ba4c6a8658921c67e0014633/native_assets.yaml: 

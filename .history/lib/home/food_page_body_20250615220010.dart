@@ -1,0 +1,15 @@
+import 'package:flutter/material.dart';
+
+class FoodPageBody extends StatefulWidget {
+  const FoodPageBody({super.key});
+
+  @override
+  State<FoodPageBody> createState() => _MyWidgetState();
+}
+
+class _FoodPageBodyState extends State<MyWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}

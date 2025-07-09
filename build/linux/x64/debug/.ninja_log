@@ -1,0 +1,56 @@
+# ninja log v5
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_engine.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_method_call.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_method_response.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/flutter_linux.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h	9093a7435799359e
+6296	6466	1752079690399336815	intermediates_do_not_run/flutter_ecommerce_2_first	12ca9b82f6dab50e
+3	5603	0	flutter/_phony_	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/libflutter_linux_gtk.so	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_value.h	9093a7435799359e
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/build/linux/x64/debug/flutter/_phony_	9093a7435799359e
+5605	6245	1752079690177329432	CMakeFiles/flutter_ecommerce_2_first.dir/flutter/generated_plugin_registrant.cc.o	e35a3b38d890e02f
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_view.h	9093a7435799359e
+12631	13678	1750269852336633496	CMakeFiles/flutter_ecommerce_2_first.dir/main.cc.o	d4088059f312d56f
+3	5603	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h	9093a7435799359e
+5604	6296	1752079690226331062	CMakeFiles/flutter_ecommerce_2_first.dir/my_application.cc.o	cba1b0707767e2d7
+6466	6651	0	CMakeFiles/install.util	136ef30bd710e27
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/libflutter_linux_gtk.so	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_engine.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_method_call.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_method_response.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_value.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/fl_view.h	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/linux/flutter/ephemeral/flutter_linux/flutter_linux.h	9093a7435799359e
+3	5669	0	flutter/_phony_	9093a7435799359e
+3	5669	0	/home/t1/code/project-of-my-dream/flutter projects/ecommerce/flutter_ecommerce_2_first/build/linux/x64/debug/flutter/_phony_	9093a7435799359e
+5670	6427	1752080376432031001	CMakeFiles/flutter_ecommerce_2_first.dir/flutter/generated_plugin_registrant.cc.o	e35a3b38d890e02f
+5670	6541	1752080376546034760	CMakeFiles/flutter_ecommerce_2_first.dir/my_application.cc.o	cba1b0707767e2d7
+6542	6738	1752080376745041321	intermediates_do_not_run/flutter_ecommerce_2_first	12ca9b82f6dab50e
+6738	6878	0	CMakeFiles/install.util	136ef30bd710e27

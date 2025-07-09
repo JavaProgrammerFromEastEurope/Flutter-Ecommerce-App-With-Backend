@@ -1,0 +1,15 @@
+import 'package:flutter_ecommerce_2_first/data/repository/popular_product_repo.dart';
+import 'package:get/get_connect/http/src/response/response.dart';
+
+class PopularProductController extends GetxController {
+  final PopularProductRepo popularProductRepo;
+  PopularProductController({required this.popularProductRepo});
+  List<dynamic> _popularProductList = [];
+  Future<void> getPopularProductList() async {
+    Response response = await popularProductRepo.getPopularProductList(){
+      if(response.statusCode==200) {
+        
+      }
+    }
+  }
+}
