@@ -70,10 +70,12 @@ class PopularFoodDetail extends StatelessWidget {
                         height: Dimensions.height20,
                       ),
                       BigText(text: "Introduce"),
+                      SizedBox(height: Dimensions.height20 / 2),
                       Expanded(
                           child: SingleChildScrollView(
                               child: ExpandableTextWidget(
-                                  text: "//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget//expandable text widget")))
+                                  text:
+                                      "Ad officia laboris Lorem adipisicing sit veniam. Tempor labore nisi ut ea nostrud quis. Ea dolor labore magna aute anim eiusmod adipisicing esse aliquip fugiat quis labore. Voluptate excepteur eu minim ipsum quis velit Lorem ex labore officia ex ex. Cillum proident id excepteur laborum. Voluptate adipisicing do aute nulla labore qui elit incididunt esse do incididunt aliqua sint. Quis aliqua aliquip aute incididunt fugiat laboris est labore. In occaecat ipsum mollit et ipsum consequat veniam. Nostrud deserunt duis elit ex sint incididunt anim consectetur sint nulla. Fugiat magna aliqua ea cupidatat ex sint et non consequat et in. Non mollit officia dolore labore occaecat adipisicing dolore eu eu exercitation ad nostrud aute. Eu cupidatat aliqua veniam consectetur laboris. Deserunt exercitation officia labore aliquip duis amet voluptate quis velit incididunt dolor aliqua Lorem. Elit aliquip irure minim irure et aute in veniam dolore Lorem Lorem. Commodo exercitation sit dolor fugiat voluptate aute mollit eiusmod aliquip nulla velit eu. Ea ea velit occaecat aute adipisicing ullamco deserunt. Officia in nisi minim et commodo commodo occaecat ea aliqua ea.")))
                     ],
                   ))),
           // expandable text widget
@@ -105,17 +107,11 @@ class PopularFoodDetail extends StatelessWidget {
                   color: Colors.white),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.remove,
-                    color: AppColors.signColor,
-                  ),
+                  Icon(Icons.remove, color: AppColors.signColor),
                   SizedBox(width: Dimensions.width10 / 2),
                   BigText(text: "0"),
                   SizedBox(width: Dimensions.width10 / 2),
-                  Icon(
-                    Icons.add,
-                    color: AppColors.signColor,
-                  )
+                  Icon(Icons.add, color: AppColors.signColor)
                 ],
               ),
             ),

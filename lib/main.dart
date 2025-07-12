@@ -18,8 +18,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     // HIGHLY IMPORTANT TO GET PRODUCTS
     Get.find<PopularProductController>().getPopularProductList();
+
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -28,8 +30,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: MainFoodPage(title: "Vd"),
-      //home: RecommendedFoodDetail(),
-      home: PopularFoodDetail(),
+      home: RecommendedFoodDetail(),
+      //home: PopularFoodDetail(),
     );
   }
 }
