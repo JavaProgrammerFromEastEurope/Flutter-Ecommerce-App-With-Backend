@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_2_first/controllers/popular_product_controller.dart';
+import 'package:flutter_ecommerce_2_first/controllers/recommended_product_controller.dart';
 import 'package:flutter_ecommerce_2_first/helper/dependencies.dart';
 import 'package:flutter_ecommerce_2_first/pages/food/popular_food_detail.dart';
 import 'package:flutter_ecommerce_2_first/pages/food/recommended_food_detail.dart';
 import 'package:flutter_ecommerce_2_first/pages/home/main_food_page.dart';
 import 'package:flutter_ecommerce_2_first/helper/dependencies.dart' as dep;
+import 'package:flutter_ecommerce_2_first/routes/route_helper.dart';
 import 'package:get/get.dart';
 
 Future<void> main() async {
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // HIGHLY IMPORTANT TO GET PRODUCTS
     Get.find<PopularProductController>().getPopularProductList();
+    Get.find<RecommendedProductController>().getRecommendedProductList();
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
@@ -29,8 +32,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      //home: MainFoodPage(title: "Vd"),
-      home: RecommendedFoodDetail(),
+      initialRoute: RouteHelper.initial,
+      getPages: RouteHelper.routes,
+      home: MainFoodPage(title: "Vd"),
+      //home: RecommendedFoodDetail(),
       //home: PopularFoodDetail(),
     );
   }
