@@ -12,7 +12,7 @@ Future<void> init() async {
 
   //repos
   Get.lazyPut(() => PopularProductRepo(apiClient: Get.find()));
-  
+
   Get.lazyPut(() => RecommendedProductRepo(apiClient: Get.find()));
 
   // controllers

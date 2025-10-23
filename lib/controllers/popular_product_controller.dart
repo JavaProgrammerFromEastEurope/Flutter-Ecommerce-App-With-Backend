@@ -6,20 +6,46 @@ import 'package:get/get_connect/http/src/response/response.dart';
 class PopularProductController extends GetxController {
   final PopularProductRepo popularProductRepo;
   PopularProductController({required this.popularProductRepo});
-  List<dynamic> _popularProductList = [];
-  List<dynamic> get popularProductList => _popularProductList;
 
-  bool _isLoaded = false;
-  bool get isLoaded => _isLoaded;
+  /// ✅ Реактивные переменные
+  final RxList<dynamic> popularProductList = <dynamic>[].obs;
+  final RxBool isLoaded = false.obs;
+  final RxInt quantity = 0.obs;
 
+  /// ✅ Получение списка продуктов
   Future<void> getPopularProductList() async {
     Response response = await popularProductRepo.getPopularProductList();
     if (response.statusCode == 200) {
       print("got products");
-      _popularProductList = [];
-      _popularProductList.addAll(Product.fromJson(response.body).products);
-      _isLoaded = true;
-      update();
-    } else {}
+      popularProductList.clear();
+      popularProductList.addAll(Product.fromJson(response.body).products);
+      isLoaded.value = true;
+    } else {
+      isLoaded.value = false;
+    }
+  }
+
+  /// ✅ Управление количеством
+  void setQuantity(bool isIncrement) {
+    if (isIncrement) {
+      quantity.value++;
+    } else {
+      if (quantity.value > 0) {
+        quantity.value--;
+      }
+    }
+  }
+
+  void resetQuantity() {
+    quantity.value = 0;
+  }
+
+  // метод добавления в корзину (если есть)
+  void addItemToCart() {
+    if (quantity.value > 0) {
+      // логика добавления в корзину
+      print("Added $quantity items to cart");
+      resetQuantity(); // можно сбросить после добавления
+    }
   }
 }
