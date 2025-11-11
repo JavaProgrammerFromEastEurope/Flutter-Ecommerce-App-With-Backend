@@ -41,7 +41,7 @@ class PopularProductController extends GetxController {
   }
 
   // метод добавления в корзину (если есть)
-  void addItemToCart() {
+  void addItemToCart(ProductModel product) {
     if (quantity.value > 0) {
       // логика добавления в корзину
       print("Added $quantity items to cart");
