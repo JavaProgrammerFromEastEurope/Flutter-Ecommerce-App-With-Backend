@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 
-class AppIcon extends StatelessWidget {
+class CartIcon extends StatelessWidget {
   final IconData icon;
+  final int itemCount;
+  final double size;
   final Color backgroundColor;
   final Color iconColor;
-  final double size;
-  final double iconSize;
-  final int? itemCount;
 
-  const AppIcon({
+  const CartIcon({
     super.key,
     required this.icon,
+    this.itemCount = 0,
+    this.size = 40,
     this.backgroundColor = const Color(0xFFfcf4e4),
     this.iconColor = const Color(0xFF756d54),
-    this.size = 40,
-    this.iconSize = 18,
-    this.itemCount,
   });
 
   @override
@@ -27,29 +25,30 @@ class AppIcon extends StatelessWidget {
           width: size,
           height: size,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(size / 2),
             color: backgroundColor,
+            borderRadius: BorderRadius.circular(size / 2),
           ),
-          child: Icon(icon, color: iconColor, size: iconSize),
+          child: Icon(icon, color: iconColor, size: size * 0.6),
         ),
-        if (itemCount != null && itemCount! > 0)
+        if (itemCount > 0)
           Positioned(
-            right: -6,
-            top: -6,
+            right: 0,
+            top: 0,
             child: Container(
-              padding: const EdgeInsets.all(6),
+              width: 20,
+              height: 20,
               decoration: const BoxDecoration(
                 color: Colors.red,
                 shape: BoxShape.circle,
               ),
-              constraints: const BoxConstraints(minWidth: 20, minHeight: 20),
               child: Center(
                 child: Text(
-                  itemCount!.toString(),
+                  itemCount.toString(),
                   style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 11,
-                      fontWeight: FontWeight.bold),
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),

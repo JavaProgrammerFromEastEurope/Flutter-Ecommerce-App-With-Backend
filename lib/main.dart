@@ -1,42 +1,48 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_2_first/controllers/popular_product_controller.dart';
-import 'package:flutter_ecommerce_2_first/controllers/recommended_product_controller.dart';
-import 'package:flutter_ecommerce_2_first/helper/dependencies.dart';
-import 'package:flutter_ecommerce_2_first/pages/food/popular_food_detail.dart';
-import 'package:flutter_ecommerce_2_first/pages/food/recommended_food_detail.dart';
-import 'package:flutter_ecommerce_2_first/pages/home/main_food_page.dart';
-import 'package:flutter_ecommerce_2_first/helper/dependencies.dart' as dep;
+import 'package:provider/provider.dart';
+import 'package:flutter_ecommerce_2_first/data/api/api_client.dart';
+import 'package:flutter_ecommerce_2_first/data/repository/cart_repo.dart';
+import 'package:flutter_ecommerce_2_first/data/repository/popular_product_repo.dart';
+import 'package:flutter_ecommerce_2_first/data/repository/recommended_product_repo.dart';
+import 'package:flutter_ecommerce_2_first/providers/cart_provider.dart';
+import 'package:flutter_ecommerce_2_first/providers/popular_product_provider.dart';
+import 'package:flutter_ecommerce_2_first/providers/recommended_product_provider.dart';
 import 'package:flutter_ecommerce_2_first/routes/route_helper.dart';
-import 'package:get/get.dart';
+import 'package:flutter_ecommerce_2_first/utils/app_constants.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await dep.init();
-  runApp(const MyApp());
+void main() {
+  final apiClient = ApiClient(
+    baseUrl: AppConstants.BASE_URL,
+    token: AppConstants.TOKEN,
+  );
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => CartProvider()),
+        ChangeNotifierProvider(
+            create: (_) => PopularProductProvider(
+                repo: PopularProductRepo(apiClient: apiClient))),
+        ChangeNotifierProvider(
+            create: (_) => RecommendedProductProvider(
+                repo: RecommendedProductRepo(apiClient: apiClient))),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // HIGHLY IMPORTANT TO GET PRODUCTS
-    Get.find<PopularProductController>().getPopularProductList();
-    Get.find<RecommendedProductController>().getRecommendedProductList();
-
-    return GetMaterialApp(
+    return MaterialApp(
+      title: 'Food App',
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: ThemeData(primarySwatch: Colors.deepOrange),
       initialRoute: RouteHelper.initial,
-      getPages: RouteHelper.routes,
-      home: MainFoodPage(title: "Vd"),
-      //home: RecommendedFoodDetail(),
-      //home: PopularFoodDetail(),
+      onGenerateRoute: RouteHelper.generateRoute,
     );
   }
 }

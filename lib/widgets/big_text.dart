@@ -1,31 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_2_first/theme/app_colors.dart';
-import 'package:flutter_ecommerce_2_first/utils/dimensions.dart';
+import '../theme/app_colors.dart';
+import '../utils/dimensions.dart';
 
-// ignore: must_be_immutable
 class BigText extends StatelessWidget {
-  Color? color;
   final String text;
-  double size;
-  final TextOverflow textOverflow;
-  BigText(
-      {super.key,
-      this.color = AppColors.mainBlackColor,
-      required this.text,
-      this.size = 0,
-      this.textOverflow = TextOverflow.ellipsis});
+  final Color color;
+  final double? size;
+  final TextOverflow overflow;
+
+  const BigText({
+    super.key,
+    required this.text,
+    this.color = AppColors.mainBlackColor,
+    this.size,
+    this.overflow = TextOverflow.ellipsis,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      maxLines: 1,
-      overflow: textOverflow,
+      overflow: overflow,
       style: TextStyle(
-        fontFamily: 'Roboto',
+        fontSize: size ?? Dimensions.font16,
         color: color,
-        fontSize: size == 0 ? Dimensions.font16 : size,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w500,
       ),
     );
   }

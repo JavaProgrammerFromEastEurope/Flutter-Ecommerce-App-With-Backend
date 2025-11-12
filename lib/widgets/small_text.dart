@@ -1,30 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_2_first/theme/app_colors.dart';
+import '../theme/app_colors.dart';
 
 class SmallText extends StatelessWidget {
-  Color? color;
   final String text;
-  double size;
-  double height;
+  final Color color;
+  final double size;
+  final double height;
 
-  SmallText({
+  const SmallText({
     super.key,
-    this.color = AppColors.textColor,
     required this.text,
+    this.color = AppColors.paraColor,
     this.size = 12,
     this.height = 1.2,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontFamily: 'Roboto',
-        color: color,
-        fontSize: size,
-        height: height
-      ),
-    );
+    return Text(text,
+        style: TextStyle(color: color, fontSize: size, height: height));
   }
 }

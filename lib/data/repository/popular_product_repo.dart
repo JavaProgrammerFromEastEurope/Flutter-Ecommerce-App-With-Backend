@@ -1,12 +1,19 @@
 import 'package:flutter_ecommerce_2_first/data/api/api_client.dart';
+import 'package:flutter_ecommerce_2_first/models/product_model.dart';
 import 'package:flutter_ecommerce_2_first/utils/app_constants.dart';
-import 'package:get/get.dart';
 
-class PopularProductRepo extends GetxService {
+class PopularProductRepo {
   final ApiClient apiClient;
   PopularProductRepo({required this.apiClient});
 
-  Future<Response> getPopularProductList() async {
-    return await apiClient.getData(AppConstants.POPULAR_PRODUCT_URI);
+  Future<List<ProductModel>> getPopularProductList() async {
+    final response = await apiClient.getData(AppConstants.POPULAR_PRODUCT_URI);
+    if (response.success) {
+      final List<dynamic> products = response.data?['products'] ?? [];
+      return products.map((e) => ProductModel.fromJson(e)).toList();
+    } else {
+      throw Exception(
+          response.errorMessage ?? "Ошибка загрузки популярных товаров");
+    }
   }
 }
