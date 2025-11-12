@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../models/product_model.dart';
 import '../../providers/cart_provider.dart';
 import '../../providers/recommended_product_provider.dart';
 import '../../theme/app_colors.dart';
+import '../../utils/app_constants.dart';
 import '../../utils/dimensions.dart';
 import '../../widgets/app_icon.dart';
 import '../../widgets/big_text.dart';
@@ -32,12 +32,15 @@ class _RecommendedFoodDetailState extends State<RecommendedFoodDetail> {
     }
 
     final product = recProv.recommendedProducts[widget.pageId];
+    final imageUrl = AppConstants.BASE_URL +
+        AppConstants.UPLOAD_PRODUCT_URI +
+        product.img!;
 
     return Scaffold(
       body: Stack(
         children: [
           Image.network(
-            product.img ?? '',
+            imageUrl,
             height: Dimensions.popularFoodImgSize,
             width: double.infinity,
             fit: BoxFit.cover,

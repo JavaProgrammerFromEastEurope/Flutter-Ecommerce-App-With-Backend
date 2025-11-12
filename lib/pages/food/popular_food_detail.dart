@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../models/product_model.dart';
 import '../../providers/cart_provider.dart';
 import '../../providers/popular_product_provider.dart';
 import '../../theme/app_colors.dart';
+import '../../utils/app_constants.dart';
 import '../../utils/dimensions.dart';
 import '../../widgets/app_icon.dart';
 import '../../widgets/big_text.dart';
@@ -34,20 +34,20 @@ class _PopularFoodDetailState extends State<PopularFoodDetail> {
     }
 
     final product = popularProv.popularProducts[widget.pageId];
+    final imageUrl = AppConstants.BASE_URL +
+        AppConstants.UPLOAD_PRODUCT_URI +
+        product.img!;
 
     return Scaffold(
       body: Stack(
         children: [
-          // Фото
           Image.network(
-            product.img ?? '',
+            imageUrl,
             height: Dimensions.popularFoodImgSize,
             width: double.infinity,
             fit: BoxFit.cover,
             errorBuilder: (_, __, ___) => Container(color: Colors.grey[300]),
           ),
-
-          // Верхние кнопки
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.width20,
@@ -64,8 +64,6 @@ class _PopularFoodDetailState extends State<PopularFoodDetail> {
               ],
             ),
           ),
-
-          // Контент
           Positioned(
             top: Dimensions.popularFoodImgSize - 30,
             left: 0,
@@ -95,8 +93,6 @@ class _PopularFoodDetailState extends State<PopularFoodDetail> {
           ),
         ],
       ),
-
-      // Нижняя панель
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(
           horizontal: Dimensions.width20,
@@ -106,7 +102,6 @@ class _PopularFoodDetailState extends State<PopularFoodDetail> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Количество
             Row(
               children: [
                 IconButton(
@@ -122,7 +117,6 @@ class _PopularFoodDetailState extends State<PopularFoodDetail> {
                 ),
               ],
             ),
-            // Добавить в корзину
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.mainColor,

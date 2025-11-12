@@ -4,6 +4,7 @@ import '../../providers/popular_product_provider.dart';
 import '../../providers/recommended_product_provider.dart';
 import '../../routes/route_helper.dart';
 import '../../theme/app_colors.dart';
+import '../../utils/app_constants.dart';
 import '../../utils/dimensions.dart';
 import '../../widgets/big_text.dart';
 import '../../widgets/small_text.dart';
@@ -28,7 +29,6 @@ class _MainFoodPageState extends State<MainFoodPage> {
       });
     });
 
-    // ✅ Запрашиваем данные из провайдеров
     Future.microtask(() {
       final popularProv = context.read<PopularProductProvider>();
       final recommendedProv = context.read<RecommendedProductProvider>();
@@ -46,7 +46,6 @@ class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
     Dimensions.init(context);
-
     final popularProv = context.watch<PopularProductProvider>();
     final recommendedProv = context.watch<RecommendedProductProvider>();
 
@@ -115,6 +114,9 @@ class _MainFoodPageState extends State<MainFoodPage> {
                           itemCount: popularProv.popularProducts.length,
                           itemBuilder: (context, index) {
                             final p = popularProv.popularProducts[index];
+                            final imageUrl = AppConstants.BASE_URL +
+                                AppConstants.UPLOAD_PRODUCT_URI +
+                                p.img!;
                             return GestureDetector(
                               onTap: () {
                                 Navigator.pushNamed(
@@ -128,9 +130,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   image: DecorationImage(
-                                    image: NetworkImage(p.img ?? ''),
+                                    image: NetworkImage(imageUrl),
                                     fit: BoxFit.cover,
-                                    onError: (_, __) {},
                                   ),
                                   boxShadow: [
                                     BoxShadow(
@@ -184,6 +185,9 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         itemCount: recommendedProv.recommendedProducts.length,
                         itemBuilder: (ctx, i) {
                           final prod = recommendedProv.recommendedProducts[i];
+                          final imageUrl = AppConstants.BASE_URL +
+                              AppConstants.UPLOAD_PRODUCT_URI +
+                              prod.img!;
                           return GestureDetector(
                             onTap: () {
                               Navigator.pushNamed(
@@ -204,9 +208,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(15),
                                       image: DecorationImage(
-                                        image: NetworkImage(prod.img ?? ''),
+                                        image: NetworkImage(imageUrl),
                                         fit: BoxFit.cover,
-                                        onError: (_, __) {},
                                       ),
                                     ),
                                   ),
